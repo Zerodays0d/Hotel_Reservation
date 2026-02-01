@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Hotel Reservation App",
+            "request": "launch",
+            "mainClass": "ui.view.HotelReservationApp",
+            "vmArgs": "--module-path \"${workspaceFolder}\\lib\" --add-modules javafx.controls,javafx.fxml,javafx.graphics"
+        },
+        {
+            "type": "java",
+            "name": "Hotel Reservation (App main)",
+            "request": "launch",
+            "mainClass": "App",
+            "vmArgs": "--module-path \"${workspaceFolder}\\lib\" --add-modules javafx.controls,javafx.fxml,javafx.graphics"
+        }
+    ]
+}
