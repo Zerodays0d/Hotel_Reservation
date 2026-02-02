@@ -1,6 +1,5 @@
 package model;
 
-
 public enum ReservationStatus {
     BOOKED,
     CHECKED_IN,

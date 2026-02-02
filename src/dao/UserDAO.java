@@ -5,7 +5,9 @@ import model.User;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ * Data Access Object interface for User entity.
+ */
 public interface UserDAO {
     User save(User user);
     User update(User user);

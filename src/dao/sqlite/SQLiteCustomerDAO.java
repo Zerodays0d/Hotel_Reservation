@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ * SQLite implementation of CustomerDAO.
+ */
 public class SQLiteCustomerDAO implements CustomerDAO {
     private static final String INSERT = "INSERT INTO customers (full_name, phone, email, id_number, username, password_hash) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String UPDATE = "UPDATE customers SET full_name=?, phone=?, email=?, id_number=?, username=?, password_hash=? WHERE customer_id=?";

@@ -1,6 +1,5 @@
 package model;
 
-
 public class Room {
     private int roomId;
     private String roomNumber;

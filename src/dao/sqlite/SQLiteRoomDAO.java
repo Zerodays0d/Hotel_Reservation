@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ * SQLite implementation of RoomDAO.
+ */
 public class SQLiteRoomDAO implements RoomDAO {
     private static final String INSERT = "INSERT INTO rooms (room_number, room_type, price_per_night, status) VALUES (?, ?, ?, ?)";
     private static final String UPDATE = "UPDATE rooms SET room_number=?, room_type=?, price_per_night=?, status=? WHERE room_id=?";

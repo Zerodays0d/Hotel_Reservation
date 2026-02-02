@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-
 public class SQLiteUserDAO implements UserDAO {
     private static final String INSERT = "INSERT INTO users (username, password_hash, full_name, is_active) VALUES (?, ?, ?, ?)";
     private static final String UPDATE = "UPDATE users SET username=?, password_hash=?, full_name=?, is_active=? WHERE user_id=?";

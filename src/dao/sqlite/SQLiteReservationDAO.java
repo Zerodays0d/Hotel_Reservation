@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * SQLite implementation of ReservationDAO.
+ */
 public class SQLiteReservationDAO implements ReservationDAO {
     private static final String INSERT = "INSERT INTO reservations (customer_id, room_id, check_in_date, check_out_date, number_of_guests, status) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String UPDATE = "UPDATE reservations SET customer_id=?, room_id=?, check_in_date=?, check_out_date=?, number_of_guests=?, status=? WHERE reservation_id=?";

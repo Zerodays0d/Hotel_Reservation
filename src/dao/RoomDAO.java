@@ -5,7 +5,9 @@ import model.Room;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ * Data Access Object interface for Room entity.
+ */
 public interface RoomDAO {
     Room save(Room room);
     Room update(Room room);

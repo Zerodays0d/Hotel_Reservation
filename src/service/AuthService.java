@@ -10,10 +10,6 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 import java.util.Optional;
 
-/**
- * Authentication business logic.
- * Depends on DAO interfaces only (Dependency Inversion).
- */
 public class AuthService {
     private static volatile int currentUserId = -1;
     private static volatile String currentUsername;

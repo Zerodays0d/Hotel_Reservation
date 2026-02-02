@@ -6,7 +6,9 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ * Data Access Object interface for Reservation entity.
+ */
 public interface ReservationDAO {
     Reservation save(Reservation reservation);
     Reservation update(Reservation reservation);

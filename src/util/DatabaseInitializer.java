@@ -1,13 +1,11 @@
 package util;
 
+import service.AuthService;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- * Initializes the SQLite database schema and seeds default data.
- */
 public final class DatabaseInitializer {
     private static final String[] CREATE_TABLES = {
             "CREATE TABLE IF NOT EXISTS users (" +
@@ -54,6 +52,7 @@ public final class DatabaseInitializer {
             }
             runMigrations(stmt);
         }
+        seedDefaultUser();
     }
 
     private static void runMigrations(Statement stmt) throws SQLException {
@@ -68,5 +67,7 @@ public final class DatabaseInitializer {
         } catch (SQLException ignored) { }
     }
 
-
+    private static void seedDefaultUser() {
+        AuthService.seedAdminIfNeeded();
+    }
 }

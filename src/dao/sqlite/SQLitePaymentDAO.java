@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ * SQLite implementation of PaymentDAO.
+ */
 public class SQLitePaymentDAO implements PaymentDAO {
     private static final DateTimeFormatter FMT = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
     private static final String INSERT = "INSERT INTO payments (reservation_id, amount, method, payment_date) VALUES (?, ?, ?, ?)";

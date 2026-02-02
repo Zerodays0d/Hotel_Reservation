@@ -4,10 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * Singleton database connection manager for SQLite.
- * Shared by all DAO implementations.
- */
 public final class SQLiteConnectionManager {
     private static final String DB_URL = "jdbc:sqlite:hotel_reservation.db";
     private static volatile SQLiteConnectionManager instance;
