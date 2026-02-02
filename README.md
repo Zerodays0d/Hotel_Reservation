@@ -1,76 +1,95 @@
-Hotel Reservation System
+🏨 Hotel Reservation System
 
-A JavaFX-based desktop application for managing hotel operations, built with Java SE and SQLite. The system demonstrates strong object-oriented programming (OOP) principles and adherence to SOLID design principles, providing a maintainable, modular, and extensible architecture.
+A JavaFX-based desktop application for managing hotel operations, demonstrating strong OOP and SOLID principles. The system is modular, maintainable, and extensible, with layered architecture and persistent SQLite storage.
 
-Features
+✨ Features
 
-Supports multiple user roles, including administrators and guests
+👤 User Roles: Admins and Guests
 
-Customer management with create, read, update, and delete operations
+📝 Customer Management: Create, read, update, delete
 
-Room management and tracking of availability
+🛏 Room Management: Track availability and details
 
-Reservation management: create, update, cancel, and validate bookings
+📅 Reservations: Book, update, and cancel rooms
 
-Payment recording and tracking for reservations
+💳 Payments: Record and track payments
 
-Secure login and authentication for both guests and administrators
+🔐 Authentication: Secure login for guests and admins
 
-Session management for tracking currently logged-in users
+🗂 Session Management: Track current users and permissions
 
-Persistent storage using SQLite
+💾 Persistence: SQLite database for all entities
 
-Architecture & Design
+🏗 Architecture & Design
 
-The system is organized into multiple layers:
+The project follows a layered architecture:
 
-UI Layer: JavaFX handles all user interactions and interface rendering
+UI Layer (JavaFX): Handles graphical interface and user interaction
 
-Service Layer: Implements business logic and validation for operations like reservations, payments, and authentication
+Service Layer: Implements business rules and validation
 
-DAO Layer: Abstracts database operations through interfaces for each entity (CustomerDAO, RoomDAO, ReservationDAO, PaymentDAO, UserDAO)
+DAO Layer: Abstracts database operations via interfaces for each entity
 
-Persistence Layer: SQLite implementations of the DAO interfaces (dao.sqlite.*) handle SQL execution, using a centralized connection manager
+Persistence Layer (SQLite): Handles SQL execution with centralized connection management
 
-The project applies OOP principles by encapsulating data in domain models, abstracting persistence through DAO interfaces, and separating responsibilities across layers. SOLID principles are applied by keeping classes focused on single responsibilities, depending on abstractions rather than concrete implementations, allowing extension without modification, and exposing only relevant operations.
+OOP & SOLID:
 
-Setup & Installation
+Encapsulation: Domain models hide internal data
 
-Clone the repository to your local machine.
+Abstraction: DAO interfaces separate contracts from SQL implementation
 
-Open the project in IntelliJ IDEA, Eclipse, or NetBeans.
+Polymorphism: Services interact with DAO interfaces, enabling interchangeable implementations
 
-Ensure Java 17 or higher is installed.
+SOLID Principles: SRP, OCP, LSP, ISP, DIP applied through focused classes, layered design, and dependency on abstractions
 
-Configure JavaFX to run the GUI. You need to set the VM options to include the JavaFX library path and modules. For example, in IntelliJ IDEA, go to Run > Edit Configurations > VM options and add the following:
+⚙️ Setup & Installation
 
-The module path should point to the lib folder of your JavaFX SDK
+Clone the repository:
 
-The modules to add are javafx.controls, javafx.fxml, and javafx.graphics
-This ensures the JavaFX runtime is loaded correctly.
+git clone https://github.com/yourusername/hotel-reservation-system.git
 
-Run the main class: ui.view.HotelReservationApp.
 
-The SQLite database will be automatically initialized on the first run, creating all necessary tables.
+Open in IntelliJ IDEA, Eclipse, or NetBeans
 
-Usage
+Install Java 17+
 
-Administrators can log in to manage customers, rooms, reservations, and payments.
+Configure JavaFX VM options (required for GUI):
 
-Guests can register and make reservations.
+Point the module path to your JavaFX lib folder
 
-Session state ensures that each user only accesses permitted features.
+Add the following modules: javafx.controls, javafx.fxml, javafx.graphics
+Example VM args:
 
-CRUD operations and business rules are handled through the service layer.
+--module-path "C:\Users\Yeab\Downloads\Compressed\openjfx-25.0.2_windows-x64_bin-sdk\javafx-sdk-25.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics
 
-Contributing
 
-Use Git and GitHub for version control.
+Run the main class:
 
-Commit meaningful changes with descriptive messages.
+ui.view.HotelReservationApp
 
-Follow the existing package structure and maintain OOP/SOLID conventions.
 
-License
+Database: SQLite tables are auto-created on first run by DatabaseInitializer.
+
+🖥 Usage
+
+Admins manage customers, rooms, reservations, and payments
+
+Guests can register and make bookings
+
+Session management ensures proper access based on role
+
+All operations are handled via services calling DAO interfaces
+
+🤝 Contributing
+
+Use Git and GitHub for version control
+
+Commit meaningful, descriptive messages
+
+Follow OOP/SOLID design conventions
+
+Maintain existing package structure
+
+📜 License
 
 This project is for academic purposes. Reuse is allowed only with proper attribution.
